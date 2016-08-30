@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<!-- Google Analytics-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-56583903-4', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+<!-- Google Adsense -->
+<style type="text/css">
+.myadslot {
+  width: 250px;
+  height: 250px;
+}
+@media (min-width:500px) {
+  .myadslot {
+    width: 336px;
+    height: 280px;
+  }
+}
+@media (min-width:800px) {
+  .myadslot {
+    width: 728px;
+    height: 90px;
+  }
+}
+@media (min-width:1100px) {
+  .myadslot {
+    width: 970px;
+    height: 90px;
+  }
+}
+</style>
+
+    <title>政見 Pickup beta</title>
+<!-- meta -->
+	<meta charset='utf-8'>
+	<meta name="description" content="政見 Pickup beta">
+ 	<meta name="keywords" content="lifelab Taiwan, lifelabtw, Kuei App, iOS, Web, vote, 政見 Pickup">
+ 	<meta name="author" content="Kuei">
+ 
+<!-- mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- css -->
+ 	<link rel=stylesheet type='text/css' href='css/bootstrap.min.css'>
+ 	<style>
+        .block{
+            font-size: 1.0em;
+            margin: 5px;
+            /*break line when word is longger than button width*/
+            max-width: 100%;
+            white-space: normal;
+            text-align: left;
+        }
+        @media screen and (min-width: 900px){
+            .card{
+                float: left;
+                width: 30%;
+                margin: 5px;
+            }
+        }
+        body{
+            background-color: #fff;
+        }
+        #areaTitle{
+            
+        }
+ 	</style>
+ 	
+<!-- javascript -->
+	<script src='js/jquery.min.js'></script>
+	<script src='js/jquery.form.min.js'></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/func.js"></script>
+	<script>
+	$(function(){
+	
+	// Disable ajax cache
+	    $.ajaxSetup({cache: false});
+		
+	// Mobile button
+		$("#navbar-button").click(function(e){
+			e.preventDefault();
+			if ($(this).hasClass("collapsed") ){
+				$(this).removeClass("collapsed");
+				$("#navbar-main").addClass("in");
+			}
+			else{
+				$(this).addClass("collapsed");
+				$("#navbar-main").removeClass("in");
+			}
+		});
+
+	// Hide address bar
+		setTimeout(function(){
+			window.scrollTo(0,1);
+		}, 1000);
+
+
+	});
+	</script>
+</head>
+<body>
+<!-- FB SDK -->
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1532740353610338&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- navbar -->
+<div class="navbar navbar-default">
+    <div class="navbar-header">
+      <a href="/" class="navbar-brand" style="color: #FF0000">政見 Pickup beta</a>
+      <button id="navbar-button" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse" id="navbar-main">          
+      <ul class="nav navbar-nav navbar-right">
+        <li><a id='btnFeedback' href="mailto:support@kueiapp.com" style="color: #FF0000">Contact</a></li>
+        <!--<li><a id='btnAbout' href="#">About</a></li>-->
+        <li><a href="http://kueiapp.com" style="color: #FF0000">&copy;2014 Kuei App</a></li>
+        <li>&nbsp;</li>
+        <!--<li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Language <span class="caret"></span></a>
+            <ul class="dropdown-menu" aria-labelledby="download">
+              <li><a href="#">繁體中文</a></li>
+              <li class="disabled"><a href="#">English</a></li>
+            </ul>
+          </li>
+        -->
+      </ul> 
+    </div>
+    <!-- /.nav-collapse -->
+  </div>
+  <!-- header -->
+</div>
+<!-- FB like buttons -->
+<div class="col-lg-12 " style="margin-bottom: 5px">
+    <div class="fb-like" data-href="http://vote.kueiap.com" data-layout="button_count" data-share="true" data-width="450" data-show-faces="true"></div>	            
+</div>
+
+<!-- container -->
+<div class="container">
+	<div id="myTabContent" class="tab-content">
+	  <h1 id="areaTitle"></h1>
+	  <!-- pick area -->
+	  <div class="tab-pane fade active in" id="area">
+	    <div class="content"></div>
+	    <!--<div class="row" style="margin-top: 8px">
+			 <a id="tabCandidate" href="#candidate" data-toggle="tab" class="btn btn-primary block">Next</a>
+	    </div>-->
+	  </div>
+	  <!-- pick announcements -->
+	  <div class="tab-pane fade" id="candidate">
+      <h4>請點選您喜歡的政見</h4>    
+	    <div class="content"></div>
+	    <div class="row" style="margin-top: 8px">
+			<a id="tabSubmit" href="#profile" data-toggle="tab" class="btn btn-primary block">Submit</a>
+	    </div>
+	    <div class="alert alert-warning" style="margin-top: 8px">
+			<a href="http://k.olc.tw/elections/" target="_blank">部份候選人政見資料不完整，請至來源網站「選舉黃頁」自由填寫</a>
+	    </div>
+	  </div>
+	  <!-- results -->
+	  <div class="tab-pane fade" id="profile">
+	    <div class="alert alert-success" style="margin-top: 8px">
+			您仍對社會與政治漠不關心嗎？<br/>
+			您仍只選黨不選人嗎？<br/>
+			本網站利用開放資料API資訊供選民參考各候選人政見 (*政見多寡會影響統計機率數據)<br/>
+			仍請多查看各候選人政見、理念、歷史、誠信、新聞等評價選擇您理想的候選人<br/>
+			小心服用你的候選人
+	    </div>
+	    <div class="content"></div>
+      <div class="col-lg-12" style="margin-top: 8px; clear:both;">
+	        <a id="startOver" href="#area" data-toggle="tab" class="btn btn-default">Start Over</a>
+      </div>
+	  </div>
+      
+	</div>
+	</div>
+    <!-- footer -->
+    <hr/>
+    <div id="footer" class="row" style="margin: 0 5px">
+        <p>Data from <a href="http://k.olc.tw/elections/" target="_blank">選舉黃頁 API</a>，與候選人競選網站</p>
+        <p>免責聲明：網頁資訊僅提供選民參考，詳細政見可至各候選人競選網站閱讀</p>
+        <p><b>請小心服用你的候選人</b></p>
+    </div>
+
+</div>
+<!--container-->
+<script src="js/main.js"></script>
+<!-- Google Adsense -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ads for ecfa.kueiapp.com -->
+<ins class="adsbygoogle myadslot"
+     style="display:inline-block;"
+     data-ad-client="ca-pub-5682343207841085"
+     data-ad-slot="8852804857"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<Limit GET POST>
+    order allow,deny
+    allow from all
+    #allow from localhost
+</Limit>
+
+RewriteEngine on
+RewriteBase /

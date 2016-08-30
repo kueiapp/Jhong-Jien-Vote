@@ -1,0 +1,40 @@
+body{
+	margin: 0 auto;
+	/*background: url('../images/krakow.jpeg') top left repeat-y fixed;
+	background-size: 100% auto; // width height */
+}
+/*.tra-background{
+	background-image: url('../images/tra_car.jpg');
+	background-size: 100% 100%;
+}
+.ecfa-background{
+	background-image: url('../images/ecfa.jpeg');
+	background-size: 100% 100%;
+}
+.moviela-background{
+	background-image: url('../images/moviela.png');
+	background-size: 100% 100%;
+}*/
+#wrapper{
+	width: 100%;
+}
+.whiteFont{
+	 color: white;
+}
+.row{
+	margin: 5px 0px;
+}
+.row>img{
+	width: 100%;
+}
+.floatLeft{
+	float: left;
+}
+.row>div{
+	/*background-color: rgba(0,0,0,0.5);*/
+	min-height: 30%;
+	margin: 50px 20%;
+	padding: 30px;
+	position: relative;
+	top: 70px;
+}
